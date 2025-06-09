@@ -12,6 +12,7 @@ public class Vehiculo {
     public Vehiculo(LocalDateTime fecha, String matricula) {
         this.fechaDeEntrada = fecha;
         this.matricula = matricula;
+        this.multas = new ArrayList<Multa>();
     }
 
     public String getMatricula() {
@@ -34,8 +35,13 @@ public class Vehiculo {
         this.horaDeSalida = horaDeSalida;
     }
 
-    public void setMultas(Multa multa) {
+
+    public void addMulta(Multa multa) {
         multas.add(multa);
+    }
+
+    public ArrayList<Multa> getMultas() {
+        return multas;
     }
 
 
